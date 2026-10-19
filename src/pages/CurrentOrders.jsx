@@ -1,0 +1,3 @@
+import { orders } from '../data/orders.js'
+import OrderTable from '../components/OrderTable.jsx'
+export default function CurrentOrders(){const rows=orders.filter(o=>o.kind==='current');return <section><div className="mb-5 flex flex-wrap items-end justify-between gap-3"><div><h2 className="text-xl font-black">Current orders</h2><p className="mt-1 text-sm text-slate-500">Orders currently being processed or shipped.</p></div><span className="rounded-full bg-white px-3 py-1.5 text-sm font-bold text-slate-600 ring-1 ring-slate-200">{rows.length} orders</span></div><OrderTable orders={rows}/></section>}
